@@ -162,26 +162,26 @@ void Paddle::moveUp(){
 }
 
 
-Ball::Ball(){
+void Ball::Ball(){
 	BallXCo = startBallXCo;
 	BallYCo = startBallYCo;
 	velX = 4;
 	velY = 4; 
 }
-Ball::~Ball(){
+void Ball::~Ball(){
 }
-Ball::drawBall(int color){
+void Ball::drawBall(int color){
 	setcolor(color);
 	setlinestyle(SOLID_LINE, 1, 1);
 	setfillstyle(SOLID_FILL, BLACK);
 	circle(BallXCo, BallYCo, RadBall);
 }
-Ball::eraseBall(){
+void Ball::eraseBall(){
 	setcolor(BLACK);
 	setfillstyle(SOLID_FILL, BLACK);
 	circle(BallXCo, BallYCo, RadBall);
 }
-Ball::moveBall(){
+void Ball::moveBall(){
 	eraseBall();
 	BallXCo+=velx;
 	BallYCo+=vely;
